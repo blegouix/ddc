@@ -45,7 +45,7 @@ KOKKOS_FUNCTION void device_for_each_serial(
         f(domain(typename Support::discrete_vector_type(is...)));
     } else {
         for (DiscreteVectorElement ii = 0; ii < size[I]; ++ii) {
-            device_for_each_serial(domain, size, f, is..., ii);
+            device_for_each_serial(domain, size, f, is..., static_cast<int>(ii));
         }
     }
 }
