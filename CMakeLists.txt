@@ -182,7 +182,7 @@ if("${DDC_BUILD_KERNELS_FFT}")
 endif()
 
 if("${DDC_BUILD_KERNELS_SPLINES}")
-    find_package(Ginkgo 1.9 REQUIRED)
+    find_package(Ginkgo 2.0 REQUIRED)
     find_package(LAPACKE REQUIRED)
     find_package(KokkosKernels 4.7...<6 REQUIRED)
 
