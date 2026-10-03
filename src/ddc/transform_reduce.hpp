@@ -104,7 +104,7 @@ KOKKOS_FUNCTION T device_transform_reduce_serial(
                             reduce,
                             transform,
                             is...,
-                            ii),
+                            static_cast<int>(ii)),
                     result);
         }
         return result;
